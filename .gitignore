@@ -1,0 +1,62 @@
+.DS_Store
+
+###BACKEND
+backend/*.swp
+backend/*.*~
+backend/project.lock.json
+backend/.DS_Store
+backend/*.pyc
+
+# Visual Studio Code
+#.vscode
+
+# User-specific files
+backend/*.suo
+backend/*.user
+backend/*.userosscache
+backend/*.sln.docstates
+
+# Build results
+backend/[Dd]ebug/
+backend/[Dd]ebugPublic/
+backend/[Rr]elease/
+backend/[Rr]eleases/
+backend/x64/
+backend/x86/
+backend/build/
+backend/bld/
+backend/[Bb]in/
+backend/[Oo]bj/
+backend/msbuild.log
+backend/msbuild.err
+backend/msbuild.wrn
+backend/src/*/[Bb]in
+backend/src/*/[Oo]bj
+backend/src/*/obj/[Dd]ebug
+
+# Visual Studio 2015
+backend/.vs/
+
+###FRONTEND
+
+# dependencies
+fontend/loja/node_modules
+fontend/loja//.pnp
+fontend/loja/.pnp.js
+
+# testing
+fontend/loja//coverage
+
+# production
+fontend/loja//build
+
+# misc
+fontend/loja/.DS_Store
+fontend/loja/.env.local
+fontend/loja/.env.development.local
+fontend/loja/.env.test.local
+fontend/loja/.env.production.local
+
+fontend/loja/npm-debug.log*
+fontend/loja/yarn-debug.log*
+fontend/loja/yarn-error.log*
