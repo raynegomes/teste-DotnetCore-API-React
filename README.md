@@ -35,7 +35,7 @@ Teste realizado para a empresa DTI Digital com WebApi com Dotnet Core, MySql, EF
     Entre na pasta 'frontend' e inicie o servidor de aplicativo
 
     ```shell
-    cd frontend/
+    cd frontend/loja/
     yarn start
     ```
 
