@@ -40,23 +40,23 @@ backend/.vs/
 ###FRONTEND
 
 # dependencies
-fontend/loja/node_modules
-fontend/loja//.pnp
-fontend/loja/.pnp.js
+frontend/loja/node_modules
+frontend/loja/.pnp
+frontend/loja/.pnp.js
 
 # testing
-fontend/loja//coverage
+frontend/loja/coverage
 
 # production
-fontend/loja//build
+frontend/loja/build
 
 # misc
-fontend/loja/.DS_Store
-fontend/loja/.env.local
-fontend/loja/.env.development.local
-fontend/loja/.env.test.local
-fontend/loja/.env.production.local
+frontend/loja/.DS_Store
+frontend/loja/.env.local
+frontend/loja/.env.development.local
+frontend/loja/.env.test.local
+frontend/loja/.env.production.local
 
-fontend/loja/npm-debug.log*
-fontend/loja/yarn-debug.log*
-fontend/loja/yarn-error.log*
+frontend/loja/npm-debug.log*
+frontend/loja/yarn-debug.log*
+frontend/loja/yarn-error.log*
