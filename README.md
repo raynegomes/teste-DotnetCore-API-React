@@ -63,5 +63,10 @@ Teste realizado para a empresa DTI Digital com WebApi com Dotnet Core, MySql, EF
 ## Frontend
 
 - React 16.10,
-- React-FontAwesome 0.1.5
+- React Icons 3.8
+- React Router Dom 5.1
 - Axios 0.19
+- React Toastify 5.4
+- React Bootstrap Table 4.3
+- History 4.10
+- React Scripts 3.3
