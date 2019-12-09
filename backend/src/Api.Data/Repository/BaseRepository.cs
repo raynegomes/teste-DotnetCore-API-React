@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Api.Data.Context;
 using Api.Domain.Entities;
@@ -79,7 +80,7 @@ namespace Api.Data.Repository
     {
       try
       {
-        return await _dataset.ToListAsync();
+        return await _dataset.OrderByDescending(p => p.CreateAt).ToListAsync();
       }
       catch (Exception ex)
       {

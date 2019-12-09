@@ -2,10 +2,9 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 using Api.Domain.Dtos.Product;
-using Api.Domain.Entities;
 using Api.Domain.Interfaces.Services.Product;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 
 namespace Api.Application.Controllers
 {
@@ -42,7 +41,7 @@ namespace Api.Application.Controllers
           msg = msg.Split(": ")[1];
         }
 
-        return StatusCode(errorCode, msg);
+        return StatusCode(errorCode, new { error = msg });
       }
     }
 
@@ -70,7 +69,7 @@ namespace Api.Application.Controllers
           msg = msg.Split(": ")[1];
         }
 
-        return StatusCode(errorCode, msg);
+        return StatusCode(errorCode, new { error = msg });
       }
     }
 
@@ -106,7 +105,7 @@ namespace Api.Application.Controllers
           msg = msg.Split(": ")[1];
         }
 
-        return StatusCode(errorCode, msg);
+        return StatusCode(errorCode, new { error = msg });
       }
     }
 
@@ -142,7 +141,7 @@ namespace Api.Application.Controllers
           msg = msg.Split(": ")[1];
         }
 
-        return StatusCode(errorCode, msg);
+        return StatusCode(errorCode, new { error = msg });
       }
     }
 
@@ -169,7 +168,7 @@ namespace Api.Application.Controllers
           msg = msg.Split(": ")[1];
         }
 
-        return StatusCode(errorCode, msg);
+        return StatusCode(errorCode, new { error = msg });
       }
     }
   }

@@ -1,9 +1,11 @@
 using System;
+using System.Net.Mime;
 using Api.CrossCutting.DependencyInjection;
 using Api.CrossCutting.Mappings;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -51,7 +53,29 @@ namespace Application
       }
       ));
 
-      services.AddControllers();
+      services.AddCors(options =>
+        {
+          options.AddDefaultPolicy(
+            builder =>
+            {
+              builder.WithOrigins("http://localhost:3000").AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+            });
+        });
+      //services.AddControllers();
+      services.AddControllers()
+      .ConfigureApiBehaviorOptions(options =>
+      {
+        options.InvalidModelStateResponseFactory = context =>
+        {
+          var result = new BadRequestObjectResult(context.ModelState);
+
+          // TODO: add `using using System.Net.Mime;` to resolve MediaTypeNames
+          result.ContentTypes.Add(MediaTypeNames.Application.Json);
+          result.ContentTypes.Add(MediaTypeNames.Application.Xml);
+
+          return result;
+        };
+      });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,6 +102,11 @@ namespace Application
       app.UseRouting();
 
       app.UseAuthorization();
+
+      app.UseCors(builder =>
+      {
+        builder.WithOrigins("http://localhost:3000").AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+      });
 
       app.UseEndpoints(endpoints =>
       {
