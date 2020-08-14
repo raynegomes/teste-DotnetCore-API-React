@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
-  Controle de Estoque - Teste DTI
+  Controle de Estoque
 </h1>
 Teste realizado para a empresa DTI Digital com WebApi com Dotnet Core, MySql, EF e DDD, Swagger e frontend react.
 
